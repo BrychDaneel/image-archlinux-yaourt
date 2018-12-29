@@ -9,7 +9,7 @@ RUN echo "[multilib]"  >>/etc/pacman.conf &&\
     mkdir /etc/pacman.d/hooks &&\
     mv ./build_context/cache_autoclean.hook /etc/pacman.d/hooks/ &&\
     \
-    pacman -Sy --needed --noconfirm base-devel git &&\
+    pacman -Sy --needed --noconfirm base-devel git pacman-contrib &&\
     \
     cd build_context &&\
     awk -f makepkg_compress_format.awk </etc/makepkg.conf >./makepkg.conf &&\
