@@ -1,7 +1,7 @@
 {
     if ($0 ~ /PKGEXT='/)
     {
-        print("SRCEXT='.pkg.tar'");
+        print("PKGEXT='.pkg.tar'");
         pkgext_found = 1;
     }
     else if ($0 ~ /SRCEXT='/)
